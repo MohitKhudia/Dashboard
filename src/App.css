@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Jomolhari&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jomolhari&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+.ff-poppins {
+  font-family: "Poppins", sans-serif;
+}
+.ff-Inter {
+  font-family: "Inter", sans-serif;
+}
+.Aside-Icon:hover svg path {
+  stroke: white;
+}
+.Dashboard .bg-white:hover {
+  background-color: #5570f1;
+  * {
+    color: white;
+  }
+  svg path {
+    stroke: white;
+  }
+}
+.Customers .bg-white:hover {
+  background-color: #5570f1;
+  * {
+    color: white;
+  }
+  svg path {
+    stroke: white;
+  }
+}
+.Orders .bg-white:hover {
+  background-color: #5570f1;
+  * {
+    color: white;
+  }
+  svg path {
+    stroke: white;
+  }
+}
+.Inventory .bg-white:hover {
+  background-color: #5570f1;
+  * {
+    color: white;
+  }
+  svg path {
+    stroke: white;
+  }
+}
+.create-order:hover svg path {
+  stroke: #5570f1;
+}
+.create-order:active {
+  transform: scale(0.8);
+  transition: 300ms;
+}
+.ToggleCheckbox {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 102px;
+  background-color:  #5570F11F;
+  transition: all 0.3s ease;
+  &:checked {
+    background-color: #5570F11F;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 50%;
+    left: 2px;
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #BBC5CB;
+    transition: all 0.3s ease;
+    transform: translateY(-50%);
+  }
+}
+.ToggleCheckbox:checked::before {
+  transform: translateX(20px) translateY(-50%);
+  background-color: #5570f166;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.select{
+  height: 24px;
+  width: 24px;
+  border-radius: 8px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid #CFD3D4;
+  position: relative;
+  &:checked {
+    background-color: #5570f1;
+    border: 1px solid #5570f1;
+  }
+}
+.select:checked::after {
+  content: "✔";
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.Custom-Height{
+  height: calc(100vh - 80px);
+}
+.overflow-hidden{
+  overflow: hidden;
+}
