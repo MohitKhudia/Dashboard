@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import Hide from '../assets/img/svg/Hide.svg'
+import Hide from '../assets/img/svg/HIde.svg'
 import Show from '../assets/img/svg/Show.svg'
 import {EmailIcon, Logo, PasswordIcon} from './Icon'
 import { Tooltip } from 'react-tooltip'
