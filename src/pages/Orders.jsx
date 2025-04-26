@@ -18,7 +18,6 @@ const Orders = () => {
     Store,
     tooltipText,
     Find,
-    setFind,
     filteredStore,
     setFilteredStore,
     Search,
@@ -281,9 +280,10 @@ const Orders = () => {
                           <select
                             name="complete"
                             id="Action"
+                            defaultValue="Completed"
                             className="appearance-none inline-block cursor-pointer text-[#8B8D97] text-sm ff-Inter outline-none"
                           >
-                            <option value="Completed">Completed</option>
+                            <option value="Completed" >Completed</option>
                             <option value="Pending">Pending</option>
                             <option value="In-Progress">In-Progress</option>
                           </select>

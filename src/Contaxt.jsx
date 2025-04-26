@@ -13,6 +13,7 @@ const Contaxt = ({ children }) => {
   const [Find, setFind] = useState("");
   const [filteredStore, setFilteredStore] = useState([]);
    const [profileImage, setProfileImage] = useState(null);
+   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("Islogin"));
   const getData = async () => {
     const Snapshort = await getDocs(collection(db, "Orders"));
     const AllData = [];
@@ -87,6 +88,8 @@ const Contaxt = ({ children }) => {
     filteredStore,
     setFilteredStore,
     Search,
+    isLoggedIn , 
+    setIsLoggedIn
   };
 
 

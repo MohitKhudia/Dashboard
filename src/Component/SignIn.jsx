@@ -6,11 +6,12 @@ import {EmailIcon, Logo, PasswordIcon, UserIcon} from './Icon'
 import { Tooltip } from 'react-tooltip'
 import { Link, useNavigate } from 'react-router-dom'
 import { LoginButton } from './Buttons'
+import { AppContext } from '../Contaxt';
 
 
 const Signin = () => {
     const [showPassword, setShowPassword] = useState(false)
-    const navigate = useNavigate();
+    const {setIsLoggedIn} = AppContext()
     const [formdata , setformdata] = useState({
       name: "",
       email: "",
@@ -23,7 +24,8 @@ const Signin = () => {
     const handleSubmit = (e) => {
         const auth = getAuth();
         createUserWithEmailAndPassword(auth, formdata.email, formdata.password).then(() => {
-            navigate("/");
+          localStorage.setItem('Islogin' , true)
+          setIsLoggedIn(true)
         }).catch((error) => {
             console.error("Sign up failed:", error.message);
         });

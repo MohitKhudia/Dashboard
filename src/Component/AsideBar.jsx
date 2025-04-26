@@ -12,12 +12,13 @@ import {
   RightArrowIcon,
   LogOutIcon,
 } from "./Icon";
-import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
+import { Link,  useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { AppContext } from "../Contaxt";
 
 const AsideBar = () => {
   const location = useLocation();
+  const {setIsLoggedIn} = AppContext()
   const { setUser } = AppContext();
   return (
     <>
@@ -189,7 +190,10 @@ const AsideBar = () => {
           <Link
             onClick={() => {
               toast.success("Logout Successfully");
-              localStorage.removeItem("isLoggedIn");
+              localStorage.removeItem("Islogin");
+              setTimeout(() => {
+                setIsLoggedIn(false)
+              }, 2000);
             }}
           >
             <div className="mt-5.5 flex items-center gap-2 justify-center">
